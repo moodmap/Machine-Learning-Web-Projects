@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "main.css" %}">
+    <title>Home page</title>
+  </head>
+  <body>
+    <h1>Go go go!!!!!</h1>
+    <a href="/two/">Go??</a>
+
+    <button id="about-btn"> Click Me - I'm Javascript on Speed</button>
+
+    <br>
+    <div id="msg">Hello</div>
+
+    <form action={% url "two" %}>
+      <textarea name="text" rows="8" cols="80">Go please..</textarea>
+      <input type="text" name="calculate">
+      <input type="submit" value="Clickadick">
+    </form>
+
+    <form action={% url "model_train" %}>
+
+      <input type="submit" value="Try">
+    </form>
+
+    <form action={% url "model_predict" %}>
+      <input type="text" name="first_value">
+      <input type="text" name="second_value">
+      <input type="text" name="third_value">
+      <input type="submit" value="Go for it">
+    </form>
+
+
+    <h2>{{ result }}</h2>
+
+    {% load staticfiles %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{% static "rango-jquery.js" %}"></script>
+  </body>
+</html>
